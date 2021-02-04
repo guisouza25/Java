@@ -95,7 +95,20 @@ public class Teste_07_SortClasseAnonimaELambdas {
 //			System.out.println(conta.getTitular().getNome());
 //		}
 		
+		List<String> frutas = new ArrayList<String>();
+		frutas.add("melancia");
+		frutas.add("abacate");
+		frutas.add("banana");
 		
+		frutas.sort(new Comparator<String>() {
+			@Override
+			public int compare(String o1, String o2) {
+				return Integer.compare(o1.length(), o2.length());
+			}
+		});
+		
+		System.out.println(frutas.toString());
+	
 	}
 }
 
